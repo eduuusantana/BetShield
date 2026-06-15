@@ -437,9 +437,7 @@ body {
   font-weight: 600;
 }
 
-/* ===========================
-   SOLUÇÃO
-=========================== */
+/*  SOLUÇÃO */
 .solution__layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -578,9 +576,7 @@ body {
   color: var(--color-gray-400);
 }
 
-/* ===========================
-   COMO FUNCIONA — STEPS
-=========================== */
+/*  COMO FUNCIONA — STEPS */
 .steps__grid {
   display: flex;
   align-items: flex-start;
@@ -639,9 +635,7 @@ body {
   font-weight: 300;
 }
 
-/* ===========================
-   BENEFÍCIOS
-=========================== */
+/* BENEFÍCIOS */
 .benefits__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -680,9 +674,7 @@ body {
   line-height: 1.6;
 }
 
-/* ===========================
-   PÚBLICO-ALVO
-=========================== */
+/*PÚBLICO-ALVO*/
 .audience__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -743,9 +735,7 @@ body {
   font-size: 0.75rem;
 }
 
-/* ===========================
-   DIFERENCIAIS
-=========================== */
+/* DIFERENCIAIS */
 .diff__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -911,9 +901,7 @@ body {
   border-bottom: none;
 }
 
-/* ===========================
-   CTA SECTION
-=========================== */
+/* CTA SECTION */
 .section--cta {
   background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
   padding: var(--space-2xl) 0;
@@ -975,9 +963,7 @@ body {
   color: var(--color-gray-400);
 }
 
-/* ===========================
-   FOOTER
-=========================== */
+/* FOOTER */
 .footer {
   background: #070f1a;
   color: var(--color-gray-400);
@@ -1064,9 +1050,7 @@ body {
   line-height: 1.7;
 }
 
-/* ===========================
-   ANIMAÇÕES
-=========================== */
+/* ANIMAÇÕES*/
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-16px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1094,9 +1078,7 @@ body {
   transform: translateY(0);
 }
 
-/* ===========================
-   RESPONSIVIDADE
-=========================== */
+/* RESPONSIVIDADE*/
 
 /* Tablet (≤ 900px) */
 @media (max-width: 900px) {
@@ -1130,10 +1112,17 @@ body {
 
 /* Mobile (≤ 640px) */
 @media (max-width: 640px) {
-  :root {
-    --space-xl:  2.5rem;
-    --space-2xl: 4rem;
+  .header__menu-btn {
+    display: flex;
+    position: relative;
+    z-index: 1001;          /* acima do header */
+    touch-action: manipulation; /* elimina delay de 300ms no toque */
+    min-width: 44px;        /* área mínima recomendada para toque */
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
   }
+
 
   /* Header mobile */
   .header__nav {
